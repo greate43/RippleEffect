@@ -35,7 +35,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.ColorRes;
+import androidx.annotation.ColorRes;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -332,8 +332,8 @@ public class RippleView extends RelativeLayout {
      * @param rippleColor New color resource
      */
     @ColorRes
-	public void setRippleColor(int rippleColor) {
-		this.rippleColor = getResources().getColor(rippleColor);
+	public int setRippleColor(int rippleColor) {
+		return this.rippleColor = getResources().getColor(rippleColor);
 	}
 
 	public int getRippleColor() {
